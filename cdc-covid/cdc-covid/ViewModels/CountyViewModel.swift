@@ -12,5 +12,6 @@ class CountyViewModel: LoadableObject {
     func load(){
         
     }
-    @Published private(set) var state: LoadingState<[Transmission]> = LoadingState.loading
+    @Published private(set) var state: LoadingState<[Transmission]> = LoadingState.loaded(Transmission.data)
+    @Published var error: Error?
 }

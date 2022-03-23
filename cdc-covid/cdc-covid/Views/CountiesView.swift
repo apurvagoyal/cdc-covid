@@ -17,6 +17,7 @@ struct CountiesView: View {
                 }
                 .listStyle(.insetGrouped)
                 .navigationTitle(Constants.counties_title)
+                .font(.system(.body, design: .monospaced))
             }
         }
         

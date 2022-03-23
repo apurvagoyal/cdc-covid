@@ -9,14 +9,15 @@ import SwiftUI
 
 struct CountyRowView: View {
     var transmission: Transmission
+
     var body: some View {
         HStack {
             Text(transmission.state)
             Spacer()
-            Text(transmission.casesPer100K)
+            Image(systemName: "star")
+                .modifier(EnumColor(value: transmission.level))
         }
     }
-        
 }
 
 struct CountyView_Previews: PreviewProvider {
