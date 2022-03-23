@@ -16,6 +16,7 @@ struct CountyRowView: View {
             Text(transmission.casesPer100K)
         }
     }
+        
 }
 
 struct CountyView_Previews: PreviewProvider {

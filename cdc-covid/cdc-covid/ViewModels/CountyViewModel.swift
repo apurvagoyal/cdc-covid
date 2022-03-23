@@ -7,6 +7,10 @@
 
 import Foundation
 import SwiftUI
-class CountyViewModel: ObservableObject {
-    @Published private(set) var transmissions: [Transmission]  = Transmission.data
+class CountyViewModel: LoadableObject {
+    //TODO: make async call
+    func load(){
+        
+    }
+    @Published private(set) var state: LoadingState<[Transmission]> = LoadingState.loading
 }

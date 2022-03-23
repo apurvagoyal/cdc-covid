@@ -15,6 +15,9 @@
 		4890DD6627EA5A0F00942814 /* Transmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD6527EA5A0F00942814 /* Transmission.swift */; };
 		4890DD6827EA62FD00942814 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD6727EA62FD00942814 /* Constants.swift */; };
 		4890DD6A27EA654500942814 /* CountyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD6927EA654500942814 /* CountyViewModel.swift */; };
+		4890DD6C27EA6DF600942814 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD6B27EA6DF600942814 /* LoadingState.swift */; };
+		4890DD6E27EA752F00942814 /* LoadableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD6D27EA752F00942814 /* LoadableObject.swift */; };
+		4890DD7027EA75DF00942814 /* AsyncContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD6F27EA75DF00942814 /* AsyncContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		4890DD6527EA5A0F00942814 /* Transmission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transmission.swift; sourceTree = "<group>"; };
 		4890DD6727EA62FD00942814 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4890DD6927EA654500942814 /* CountyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyViewModel.swift; sourceTree = "<group>"; };
+		4890DD6B27EA6DF600942814 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
+		4890DD6D27EA752F00942814 /* LoadableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableObject.swift; sourceTree = "<group>"; };
+		4890DD6F27EA75DF00942814 /* AsyncContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,7 @@
 			children = (
 				4890DD6127EA53AD00942814 /* CountiesView.swift */,
 				4890DD6327EA53BC00942814 /* CountyRowView.swift */,
+				4890DD6F27EA75DF00942814 /* AsyncContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -115,6 +122,8 @@
 			children = (
 				4890DD6527EA5A0F00942814 /* Transmission.swift */,
 				4890DD6727EA62FD00942814 /* Constants.swift */,
+				4890DD6B27EA6DF600942814 /* LoadingState.swift */,
+				4890DD6D27EA752F00942814 /* LoadableObject.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,11 +198,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4890DD6C27EA6DF600942814 /* LoadingState.swift in Sources */,
 				4890DD6A27EA654500942814 /* CountyViewModel.swift in Sources */,
+				4890DD6E27EA752F00942814 /* LoadableObject.swift in Sources */,
 				4890DD6827EA62FD00942814 /* Constants.swift in Sources */,
 				4890DD6427EA53BC00942814 /* CountyRowView.swift in Sources */,
 				4890DD6627EA5A0F00942814 /* Transmission.swift in Sources */,
 				4890DD6227EA53AD00942814 /* CountiesView.swift in Sources */,
+				4890DD7027EA75DF00942814 /* AsyncContentView.swift in Sources */,
 				4890DD4F27E5885000942814 /* cdc_covidApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

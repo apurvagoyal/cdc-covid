@@ -11,17 +11,58 @@ struct CountiesView: View {
     @StateObject var viewModel: CountyViewModel
     var body: some View {
         NavigationView {
-            List(viewModel.transmissions) { transmission in
-                CountyRowView(transmission: transmission)
+            AsyncContentView(source: viewModel, loadingView: Placeholder()){ transmissions in
+                List(transmissions) { transmission in
+                    CountyRowView(transmission: transmission)
+                }
+                .listStyle(.insetGrouped)
+                .navigationTitle(Constants.counties_title)
             }
-            .listStyle(.insetGrouped)
-            .navigationTitle(Constants.counties_title)
         }
+        
     }
 }
 
 struct CountiesView_Previews: PreviewProvider {
     static var previews: some View {
         CountiesView(viewModel: CountyViewModel())
+    }
+}
+
+struct Placeholder: View {
+    var body: some View {
+        List{
+            CountyRowView(transmission: Transmission(
+             fips: "123",
+             name: "South Dakota",
+             state: "South Dakota",
+             casesPer100K: "1000",
+             positiveTestResults: 34.67))
+            CountyRowView(transmission: Transmission(
+             fips: "123",
+             name: "South Dakota",
+             state: "South Dakota",
+             casesPer100K: "1000",
+             positiveTestResults: 34.67))
+            CountyRowView(transmission: Transmission(
+             fips: "123",
+             name: "South Dakota",
+             state: "South Dakota",
+             casesPer100K: "1000",
+             positiveTestResults: 34.67))
+            CountyRowView(transmission: Transmission(
+             fips: "123",
+             name: "South Dakota",
+             state: "South Dakota",
+             casesPer100K: "1000",
+             positiveTestResults: 34.67))
+            CountyRowView(transmission: Transmission(
+             fips: "123",
+             name: "South Dakota",
+             state: "South Dakota",
+             casesPer100K: "1000",
+             positiveTestResults: 34.67))
+        }
+       .redacted(reason: .placeholder)
     }
 }
