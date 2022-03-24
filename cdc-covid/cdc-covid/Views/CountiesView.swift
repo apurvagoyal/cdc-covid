@@ -20,7 +20,13 @@ struct CountiesView: View {
                 .font(.system(.body, design: .monospaced))
             }
         }
-        
+        .task {
+            //check if the state is not already loading
+            if viewModel.state == LoadingState.loading {return}
+            await viewModel.load{
+                try await API().transmissions(in: "VA", "2020-03-22:T00:00:00.00")
+            }
+        }
     }
 }
 
@@ -35,31 +41,31 @@ struct Placeholder: View {
         List{
             CountyRowView(transmission: Transmission(
              fips: "123",
-             name: "South Dakota",
+             county: "South Dakota",
              state: "South Dakota",
              casesPer100K: "1000",
              positiveTestResults: 34.67))
             CountyRowView(transmission: Transmission(
              fips: "123",
-             name: "South Dakota",
+             county: "South Dakota",
              state: "South Dakota",
              casesPer100K: "1000",
              positiveTestResults: 34.67))
             CountyRowView(transmission: Transmission(
              fips: "123",
-             name: "South Dakota",
+             county: "South Dakota",
              state: "South Dakota",
              casesPer100K: "1000",
              positiveTestResults: 34.67))
             CountyRowView(transmission: Transmission(
              fips: "123",
-             name: "South Dakota",
+             county: "South Dakota",
              state: "South Dakota",
              casesPer100K: "1000",
              positiveTestResults: 34.67))
             CountyRowView(transmission: Transmission(
              fips: "123",
-             name: "South Dakota",
+             county: "South Dakota",
              state: "South Dakota",
              casesPer100K: "1000",
              positiveTestResults: 34.67))

@@ -12,7 +12,7 @@ struct CountyRowView: View {
 
     var body: some View {
         HStack {
-            Text(transmission.state)
+            Text(transmission.county)
             Spacer()
             Image(systemName: "star")
                 .modifier(EnumColor(value: transmission.level))

@@ -19,6 +19,8 @@
 		4890DD6E27EA752F00942814 /* LoadableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD6D27EA752F00942814 /* LoadableObject.swift */; };
 		4890DD7027EA75DF00942814 /* AsyncContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD6F27EA75DF00942814 /* AsyncContentView.swift */; };
 		4890DD7527EBA36400942814 /* EnumColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD7427EBA36400942814 /* EnumColor.swift */; };
+		4890DD7727EBA82900942814 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD7627EBA82900942814 /* Endpoint.swift */; };
+		4890DD7927EBB61000942814 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD7827EBB61000942814 /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		4890DD6D27EA752F00942814 /* LoadableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableObject.swift; sourceTree = "<group>"; };
 		4890DD6F27EA75DF00942814 /* AsyncContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncContentView.swift; sourceTree = "<group>"; };
 		4890DD7427EBA36400942814 /* EnumColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumColor.swift; sourceTree = "<group>"; };
+		4890DD7627EBA82900942814 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		4890DD7827EBB61000942814 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 		4890DD5E27EA538400942814 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				4890DD7627EBA82900942814 /* Endpoint.swift */,
+				4890DD7827EBB61000942814 /* API.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -213,11 +219,13 @@
 				4890DD6A27EA654500942814 /* CountyViewModel.swift in Sources */,
 				4890DD6E27EA752F00942814 /* LoadableObject.swift in Sources */,
 				4890DD6827EA62FD00942814 /* Constants.swift in Sources */,
+				4890DD7727EBA82900942814 /* Endpoint.swift in Sources */,
 				4890DD6427EA53BC00942814 /* CountyRowView.swift in Sources */,
 				4890DD6627EA5A0F00942814 /* Transmission.swift in Sources */,
 				4890DD6227EA53AD00942814 /* CountiesView.swift in Sources */,
 				4890DD7027EA75DF00942814 /* AsyncContentView.swift in Sources */,
 				4890DD7527EBA36400942814 /* EnumColor.swift in Sources */,
+				4890DD7927EBB61000942814 /* API.swift in Sources */,
 				4890DD4F27E5885000942814 /* cdc_covidApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,10 +6,10 @@
 //
 
 import Foundation
-struct Transmission: Identifiable {
+struct Transmission: Identifiable, Codable {
     //always use enums in the model to display state and remove ambiguity
     //this also sits well with state machine
-    enum transmission_level {
+    enum transmission_level: Codable {
         case high
         case substantial
         case moderate
@@ -18,7 +18,7 @@ struct Transmission: Identifiable {
     }
     let id = UUID()
     var fips: String
-    var name: String
+    var county: String
     var state: String
     var casesPer100K: String
     var positiveTestResults: Double
@@ -28,6 +28,20 @@ struct Transmission: Identifiable {
 
 extension Transmission {
     static let data =
-        [Transmission(fips: "46103", name: "Brown County", state: "VA", casesPer100K: "65.264", positiveTestResults: 14.08, level: .high)]
+        [Transmission(fips: "46103", county: "Brown County", state: "Virginia", casesPer100K: "65.264", positiveTestResults: 14.08, level: .high),
+         Transmission(fips: "46103", county: "Riley County", state: "Kansas", casesPer100K: "65.264", positiveTestResults: 14.08, level: .substantial),
+         Transmission(fips: "46103", county: "Knox County", state: "Ohio", casesPer100K: "22.464", positiveTestResults: 14.08, level: .low),
+         Transmission(fips: "46103", county: "Brown County", state: "California", casesPer100K: "65.264", positiveTestResults: 14.08, level: .moderate)]
     
+}
+
+extension Transmission {
+    enum CodingKeys: String, CodingKey {
+        case fips = "fips_code"
+        case county = "county_name"
+        case state = "state_name"
+        case casesPer100K = "cases_per_100k_7_day_count"
+        case positiveTestResults = "percent_test_results_reported"
+        case level = "community_transmission_level"
+    }
 }
