@@ -23,9 +23,7 @@ struct CountiesView: View {
         .task {
             //check if the state is not already loading
             if viewModel.state == LoadingState.loading {return}
-            await viewModel.load{
-                try await API().transmissions(in: "VA", "2020-03-22:T00:00:00.00")
-            }
+            await viewModel.load()
         }
     }
 }

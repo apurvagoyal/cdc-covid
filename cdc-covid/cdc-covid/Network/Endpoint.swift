@@ -15,8 +15,8 @@ extension Endpoint {
     //https://data.cdc.gov/resource/nra9-vzzn.json
     func url() -> URL? {
         var components = URLComponents()
-        components.scheme = API.scheme
-        components.host = API.host
+        components.scheme = "https"
+        components.host = "data.cdc.gov"
         components.path = "/" + path
         components.queryItems = queryItems.isEmpty ? nil : queryItems
 
