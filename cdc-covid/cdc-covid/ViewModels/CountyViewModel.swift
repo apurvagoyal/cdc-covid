@@ -21,7 +21,7 @@ class CountyViewModel: LoadableObject {
             let transmissions = try await apiClient.send(request)
             await updateState(newState: .loaded(transmissions))
         } catch (let error) {
-            logger.log("\(error.localizedDescription)")
+            logger.log("\(String(describing: error))")
             await updateState(newState: .failed(error))
             //self.error = error
         }

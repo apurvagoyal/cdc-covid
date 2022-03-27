@@ -41,27 +41,32 @@ struct Placeholder: View {
              fips: "123",
              county: "South Dakota",
              state: "South Dakota",
-             casesPer100K: "1000"))
+             casesPer100K: "1000",
+             level: .substantial))
             CountyRowView(transmission: Transmission(
              fips: "123",
              county: "South Dakota",
              state: "South Dakota",
-             casesPer100K: "1000"))
+             casesPer100K: "1000",
+             level: .substantial))
             CountyRowView(transmission: Transmission(
              fips: "123",
              county: "South Dakota",
              state: "South Dakota",
-             casesPer100K: "1000"))
+             casesPer100K: "1000",
+             level: .substantial))
             CountyRowView(transmission: Transmission(
              fips: "123",
              county: "South Dakota",
              state: "South Dakota",
-             casesPer100K: "1000"))
+             casesPer100K: "1000",
+             level: .substantial))
             CountyRowView(transmission: Transmission(
              fips: "123",
              county: "South Dakota",
              state: "South Dakota",
-             casesPer100K: "1000"))
+             casesPer100K: "1000",
+             level: .substantial))
         }
        .redacted(reason: .placeholder)
     }

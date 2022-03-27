@@ -86,6 +86,7 @@ extension APIClient {
     func makeRequest(url: URL, method: String) async throws -> URLRequest {
         var request = URLRequest(url: url)
         request.httpMethod = method
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue(APIClient.app_token, forHTTPHeaderField: "X-App-Token")
         logger.log("request: \(request.debugDescription)")
         return request

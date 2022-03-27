@@ -9,7 +9,7 @@ import Foundation
 struct Transmission: Identifiable, Codable {
     //always use enums in the model to display state and remove ambiguity
     //this also sits well with state machine
-    enum transmission_level: Codable {
+    enum transmission_level: String, Codable {
         case high
         case substantial
         case moderate
@@ -22,7 +22,7 @@ struct Transmission: Identifiable, Codable {
     var state: String
     var casesPer100K: String
     //var positiveTestResults: Double
-    var level: transmission_level = .unknown
+    var level: transmission_level
     
     
     
