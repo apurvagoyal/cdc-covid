@@ -19,7 +19,7 @@ struct AsyncContentView<Source: LoadableObject, LoadingView: View, Content: View
     var body: some View {
         switch source.state {
         case .idle:
-            EmptyView()
+            loadingView
         case .loading:
             loadingView
         case .failed(let error):

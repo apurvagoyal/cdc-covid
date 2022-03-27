@@ -7,24 +7,32 @@
 
 import Foundation
 import SwiftUI
+import os
 class CountyViewModel: LoadableObject {
     //TODO: make async call
     func load() async {
         //TODO: Sort the model alphabetically
-        state = .loading
+        await updateState(newState: .loading)
         var queryItems: [String:String] = [:]
-        queryItems["state_name"] = "VA"
-        queryItems["date"] = "2020-03-22:T00:00:00.00"
+        queryItems["state_name"] = "Virginia"
+        queryItems["date"] = "2022-03-22T00:00:00.000"
         let request = Request<[Transmission]>.get("resource/nra9-vzzn.json", query: queryItems)
         do {
             let transmissions = try await apiClient.send(request)
-            state = .loaded(transmissions)
+            await updateState(newState: .loaded(transmissions))
         } catch (let error) {
-            self.error = error
-            state = .failed(error)
+            logger.log("\(error.localizedDescription)")
+            await updateState(newState: .failed(error))
+            //self.error = error
         }
     }
-    @Published private(set) var state: LoadingState<[Transmission]> = LoadingState.loading
-    @Published var error: Error?
+    
+    @MainActor
+    func updateState(newState: LoadingState<[Transmission]>) {
+        state = newState
+    }
+    @MainActor @Published private(set) var state: LoadingState<[Transmission]> = LoadingState.idle
+    @MainActor @Published var error: Error?
     private let apiClient = APIClient()
+    let logger = Logger(subsystem: "com.deloitte.cdc-covid", category: "api")
 }

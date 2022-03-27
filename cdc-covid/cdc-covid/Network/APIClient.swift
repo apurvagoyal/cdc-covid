@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import os
 public actor APIClient {
     static let scheme = "https"
     static let app_token = "wvgfZtdmCamegTkSBeIJLo17Z"
-    
+    let logger = Logger(subsystem: "com.deloitte.cdc-covid", category: "api")
     enum APIError: Error {
         case invalidURL
         case invalidRequest
@@ -42,7 +43,7 @@ public actor APIClient {
 }
 
 extension APIClient {
-    public func send<T: Decodable>(_ request: Request<T>) async throws -> T {
+    public func send<T: Decodable>(_ request: Request<T>, cachePolicy: URLRequest.CachePolicy = .reloadIgnoringCacheData) async throws -> T {
         try await send(request, serializer.decode)
     }
     
@@ -54,6 +55,8 @@ extension APIClient {
         let request = try await makeRequest(for: request)
         let (data, response) = try await send(request)
         try validate(response: response, data: data)
+        let str = String(decoding: data, as: UTF8.self)
+        print(str)
         return try await decode(data)
     }
     private func send(_ request: URLRequest) async throws -> (Data, URLResponse) {
@@ -66,14 +69,11 @@ extension APIClient {
     }
     
     func makeURL(path: String, query: [String: String]?) throws -> URL {
-        guard let url = URL(string: path),
-              var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
-            throw URLError(.badURL)
-        }
-        if path.starts(with: "/") {
-            components.scheme = APIClient.scheme
-            components.host = host
-        }
+        var components = URLComponents()
+        components.scheme = APIClient.scheme
+        components.host = host
+        components.path = "/" + path
+
         if let query = query {
             components.queryItems = query.map(URLQueryItem.init)
         }
@@ -86,15 +86,19 @@ extension APIClient {
     func makeRequest(url: URL, method: String) async throws -> URLRequest {
         var request = URLRequest(url: url)
         request.httpMethod = method
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue(APIClient.app_token, forHTTPHeaderField: "X-App-Token")
+        logger.log("request: \(request.debugDescription)")
         return request
     }
     
     func validate(response: URLResponse, data: Data) throws {
         guard let httpResponse = response as? HTTPURLResponse else { return }
         if !(200..<300).contains(httpResponse.statusCode) {
+            //TODO: Is this a good idea to send
+           
             throw URLError(.badServerResponse)
         }
+        logger.log("http response: \(httpResponse.statusCode)")
     }
 }
 
