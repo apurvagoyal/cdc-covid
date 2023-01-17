@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4831E6402970ABF700213DD6 /* Vaccination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831E63F2970ABF700213DD6 /* Vaccination.swift */; };
 		4890DD4F27E5885000942814 /* cdc_covidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD4E27E5885000942814 /* cdc_covidApp.swift */; };
 		4890DD5327E5885100942814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4890DD5227E5885100942814 /* Assets.xcassets */; };
 		4890DD5627E5885100942814 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4890DD5527E5885100942814 /* Preview Assets.xcassets */; };
@@ -14,7 +15,7 @@
 		4890DD6427EA53BC00942814 /* CountyRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD6327EA53BC00942814 /* CountyRowView.swift */; };
 		4890DD6627EA5A0F00942814 /* Transmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD6527EA5A0F00942814 /* Transmission.swift */; };
 		4890DD6827EA62FD00942814 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD6727EA62FD00942814 /* Constants.swift */; };
-		4890DD6A27EA654500942814 /* CountyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD6927EA654500942814 /* CountyViewModel.swift */; };
+		4890DD6A27EA654500942814 /* CountiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD6927EA654500942814 /* CountiesViewModel.swift */; };
 		4890DD6C27EA6DF600942814 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD6B27EA6DF600942814 /* LoadingState.swift */; };
 		4890DD6E27EA752F00942814 /* LoadableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD6D27EA752F00942814 /* LoadableObject.swift */; };
 		4890DD7027EA75DF00942814 /* AsyncContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD6F27EA75DF00942814 /* AsyncContentView.swift */; };
@@ -22,9 +23,12 @@
 		4890DD7727EBA82900942814 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD7627EBA82900942814 /* Endpoint.swift */; };
 		4890DD7927EBB61000942814 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD7827EBB61000942814 /* APIClient.swift */; };
 		4890DD7D27ECF3DC00942814 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD7C27ECF3DC00942814 /* Request.swift */; };
+		48FF7764285BCD4200A0C116 /* CountyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FF7763285BCD4200A0C116 /* CountyView.swift */; };
+		48FF7766285BCE1600A0C116 /* CountyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FF7765285BCE1600A0C116 /* CountyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4831E63F2970ABF700213DD6 /* Vaccination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vaccination.swift; sourceTree = "<group>"; };
 		4890DD4B27E5885000942814 /* cdc-covid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cdc-covid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4890DD4E27E5885000942814 /* cdc_covidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cdc_covidApp.swift; sourceTree = "<group>"; };
 		4890DD5227E5885100942814 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,7 +37,7 @@
 		4890DD6327EA53BC00942814 /* CountyRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyRowView.swift; sourceTree = "<group>"; };
 		4890DD6527EA5A0F00942814 /* Transmission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transmission.swift; sourceTree = "<group>"; };
 		4890DD6727EA62FD00942814 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		4890DD6927EA654500942814 /* CountyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyViewModel.swift; sourceTree = "<group>"; };
+		4890DD6927EA654500942814 /* CountiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountiesViewModel.swift; sourceTree = "<group>"; };
 		4890DD6B27EA6DF600942814 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 		4890DD6D27EA752F00942814 /* LoadableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableObject.swift; sourceTree = "<group>"; };
 		4890DD6F27EA75DF00942814 /* AsyncContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +45,8 @@
 		4890DD7627EBA82900942814 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		4890DD7827EBB61000942814 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		4890DD7C27ECF3DC00942814 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		48FF7763285BCD4200A0C116 /* CountyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyView.swift; sourceTree = "<group>"; };
+		48FF7765285BCE1600A0C116 /* CountyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,7 @@
 				4890DD6127EA53AD00942814 /* CountiesView.swift */,
 				4890DD6327EA53BC00942814 /* CountyRowView.swift */,
 				4890DD6F27EA75DF00942814 /* AsyncContentView.swift */,
+				48FF7763285BCD4200A0C116 /* CountyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -107,7 +114,8 @@
 		4890DD5D27EA537D00942814 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				4890DD6927EA654500942814 /* CountyViewModel.swift */,
+				4890DD6927EA654500942814 /* CountiesViewModel.swift */,
+				48FF7765285BCE1600A0C116 /* CountyViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -135,6 +143,7 @@
 				4890DD6527EA5A0F00942814 /* Transmission.swift */,
 				4890DD6B27EA6DF600942814 /* LoadingState.swift */,
 				4890DD6D27EA752F00942814 /* LoadableObject.swift */,
+				4831E63F2970ABF700213DD6 /* Vaccination.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -220,15 +229,18 @@
 			files = (
 				4890DD6C27EA6DF600942814 /* LoadingState.swift in Sources */,
 				4890DD7D27ECF3DC00942814 /* Request.swift in Sources */,
-				4890DD6A27EA654500942814 /* CountyViewModel.swift in Sources */,
+				4890DD6A27EA654500942814 /* CountiesViewModel.swift in Sources */,
 				4890DD6E27EA752F00942814 /* LoadableObject.swift in Sources */,
+				48FF7764285BCD4200A0C116 /* CountyView.swift in Sources */,
 				4890DD6827EA62FD00942814 /* Constants.swift in Sources */,
 				4890DD7727EBA82900942814 /* Endpoint.swift in Sources */,
 				4890DD6427EA53BC00942814 /* CountyRowView.swift in Sources */,
 				4890DD6627EA5A0F00942814 /* Transmission.swift in Sources */,
 				4890DD6227EA53AD00942814 /* CountiesView.swift in Sources */,
 				4890DD7027EA75DF00942814 /* AsyncContentView.swift in Sources */,
+				4831E6402970ABF700213DD6 /* Vaccination.swift in Sources */,
 				4890DD7527EBA36400942814 /* EnumColor.swift in Sources */,
+				48FF7766285BCE1600A0C116 /* CountyViewModel.swift in Sources */,
 				4890DD7927EBB61000942814 /* APIClient.swift in Sources */,
 				4890DD4F27E5885000942814 /* cdc_covidApp.swift in Sources */,
 			);
@@ -367,6 +379,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -396,6 +409,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

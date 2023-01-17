@@ -50,7 +50,6 @@ extension Endpoint {
     static var transmissions: Self {
         Endpoint(path: "resource/nra9-vzzn.json")
     }
-
     
     static func transmissions(for state: String, _ date: String) -> Self {
         Endpoint(
@@ -58,6 +57,21 @@ extension Endpoint {
             queryItems: [URLQueryItem(
                 name: "state_name",
                 value: state
+            ),
+                         URLQueryItem(
+                            name: "date",
+                            value: date
+                         )]
+        )
+    }
+
+    
+    static func vaccination(for fips: String, _ date: String) -> Self {
+        Endpoint(
+            path: "resource/8xkx-amqh.json",
+            queryItems: [URLQueryItem(
+                name: "fips",
+                value: fips
             ),
                          URLQueryItem(
                             name: "date",

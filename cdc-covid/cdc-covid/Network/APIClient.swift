@@ -14,6 +14,7 @@ public actor APIClient {
     enum APIError: Error {
         case invalidURL
         case invalidRequest
+        case noData
     }
     
     private let urlSession: URLSession

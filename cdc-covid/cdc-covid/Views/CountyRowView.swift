@@ -15,7 +15,7 @@ struct CountyRowView: View {
             Text(transmission.county)
             Spacer()
             Image(systemName: "star")
-                .modifier(EnumColor(value: transmission.level))
+                .modifier(EnumColor(value: transmission.level!))
         }
     }
 }

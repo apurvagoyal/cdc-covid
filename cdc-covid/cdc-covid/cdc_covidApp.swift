@@ -11,7 +11,7 @@ import SwiftUI
 struct cdc_covidApp: App {
     var body: some Scene {
         WindowGroup {
-            CountiesView(viewModel: CountyViewModel())
+            CountiesView(viewModel: CountiesViewModel())
         }
     }
 }

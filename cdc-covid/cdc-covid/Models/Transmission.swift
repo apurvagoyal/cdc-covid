@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct Transmission: Identifiable, Codable {
+struct Transmission: Identifiable, Decodable, Hashable {
     //always use enums in the model to display state and remove ambiguity
     //this also sits well with state machine
     enum transmission_level: String, Codable {
@@ -22,10 +22,14 @@ struct Transmission: Identifiable, Codable {
     var state: String
     var casesPer100K: String
     //var positiveTestResults: Double
-    var level: transmission_level
+    var level: transmission_level? 
     
     
-    
+//    init(from decoder: Decoder) throws {
+//           let container = try decoder.singleValueContainer()
+//           let wrappers = try container.decode([ElementWrapper].self)
+//           elements = wrappers.compactMap(\.element)
+//       }
 }
 
 extension Transmission {

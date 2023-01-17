@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct CountiesView: View {
-    @StateObject var viewModel: CountyViewModel
+    @StateObject var viewModel: CountiesViewModel
     var body: some View {
         NavigationView {
             AsyncContentView(source: viewModel, loadingView: Placeholder()){ transmissions in
-                List(transmissions) { transmission in
-                    CountyRowView(transmission: transmission)
+                NavigationStack {
+                    List(transmissions) { transmission in
+                        NavigationLink(value: transmission){
+                            CountyRowView(transmission: transmission)
+                        }
+                    }
+                    .listStyle(.insetGrouped)
+                    .navigationDestination(for: Transmission.self) { transmission in
+                        CountyView(viewModel: CountyViewModel(fips: transmission.fips))
+                    }
                 }
-                .listStyle(.insetGrouped)
                 .navigationTitle(Constants.counties_title)
                 .font(.system(.body, design: .monospaced))
             }
@@ -30,7 +37,7 @@ struct CountiesView: View {
 
 struct CountiesView_Previews: PreviewProvider {
     static var previews: some View {
-        CountiesView(viewModel: CountyViewModel())
+        CountiesView(viewModel: CountiesViewModel())
     }
 }
 
