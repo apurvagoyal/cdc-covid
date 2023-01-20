@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct Vaccination: Identifiable, Decodable, Hashable {
+struct Vaccination: Identifiable, Decodable, Hashable, Equatable {
     let id = UUID()
     var fips: String
     var county: String

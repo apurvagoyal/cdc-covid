@@ -23,6 +23,12 @@
 		4890DD7727EBA82900942814 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD7627EBA82900942814 /* Endpoint.swift */; };
 		4890DD7927EBB61000942814 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD7827EBB61000942814 /* APIClient.swift */; };
 		4890DD7D27ECF3DC00942814 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DD7C27ECF3DC00942814 /* Request.swift */; };
+		48A26AF92979F63800459C94 /* TransmissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A26AF82979F63800459C94 /* TransmissionView.swift */; };
+		48A26AFD297A0A9F00459C94 /* ComposableTransmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A26AFC297A0A9F00459C94 /* ComposableTransmission.swift */; };
+		48A26B01297B211E00459C94 /* ComposableVaccination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A26B00297B211E00459C94 /* ComposableVaccination.swift */; };
+		48A26B03297B33DD00459C94 /* VaccinationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A26B02297B33DD00459C94 /* VaccinationsView.swift */; };
+		48A26B05297B3C5900459C94 /* SimpleLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A26B04297B3C5900459C94 /* SimpleLoadingState.swift */; };
+		48A3BB722977658C00AE73FA /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 48A3BB712977658C00AE73FA /* ComposableArchitecture */; };
 		48FF7764285BCD4200A0C116 /* CountyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FF7763285BCD4200A0C116 /* CountyView.swift */; };
 		48FF7766285BCE1600A0C116 /* CountyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FF7765285BCE1600A0C116 /* CountyViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -45,6 +51,11 @@
 		4890DD7627EBA82900942814 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		4890DD7827EBB61000942814 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		4890DD7C27ECF3DC00942814 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		48A26AF82979F63800459C94 /* TransmissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransmissionView.swift; sourceTree = "<group>"; };
+		48A26AFC297A0A9F00459C94 /* ComposableTransmission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableTransmission.swift; sourceTree = "<group>"; };
+		48A26B00297B211E00459C94 /* ComposableVaccination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableVaccination.swift; sourceTree = "<group>"; };
+		48A26B02297B33DD00459C94 /* VaccinationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationsView.swift; sourceTree = "<group>"; };
+		48A26B04297B3C5900459C94 /* SimpleLoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLoadingState.swift; sourceTree = "<group>"; };
 		48FF7763285BCD4200A0C116 /* CountyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyView.swift; sourceTree = "<group>"; };
 		48FF7765285BCE1600A0C116 /* CountyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48A3BB722977658C00AE73FA /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +119,8 @@
 				4890DD6327EA53BC00942814 /* CountyRowView.swift */,
 				4890DD6F27EA75DF00942814 /* AsyncContentView.swift */,
 				48FF7763285BCD4200A0C116 /* CountyView.swift */,
+				48A26AF82979F63800459C94 /* TransmissionView.swift */,
+				48A26B02297B33DD00459C94 /* VaccinationsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -144,6 +158,9 @@
 				4890DD6B27EA6DF600942814 /* LoadingState.swift */,
 				4890DD6D27EA752F00942814 /* LoadableObject.swift */,
 				4831E63F2970ABF700213DD6 /* Vaccination.swift */,
+				48A26AFC297A0A9F00459C94 /* ComposableTransmission.swift */,
+				48A26B00297B211E00459C94 /* ComposableVaccination.swift */,
+				48A26B04297B3C5900459C94 /* SimpleLoadingState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -173,6 +190,9 @@
 			dependencies = (
 			);
 			name = "cdc-covid";
+			packageProductDependencies = (
+				48A3BB712977658C00AE73FA /* ComposableArchitecture */,
+			);
 			productName = "cdc-covid";
 			productReference = 4890DD4B27E5885000942814 /* cdc-covid.app */;
 			productType = "com.apple.product-type.application";
@@ -201,6 +221,9 @@
 				Base,
 			);
 			mainGroup = 4890DD4227E5885000942814;
+			packageReferences = (
+				48A3BB702977658C00AE73FA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 4890DD4C27E5885000942814 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -227,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48A26AF92979F63800459C94 /* TransmissionView.swift in Sources */,
 				4890DD6C27EA6DF600942814 /* LoadingState.swift in Sources */,
 				4890DD7D27ECF3DC00942814 /* Request.swift in Sources */,
 				4890DD6A27EA654500942814 /* CountiesViewModel.swift in Sources */,
@@ -236,6 +260,8 @@
 				4890DD7727EBA82900942814 /* Endpoint.swift in Sources */,
 				4890DD6427EA53BC00942814 /* CountyRowView.swift in Sources */,
 				4890DD6627EA5A0F00942814 /* Transmission.swift in Sources */,
+				48A26AFD297A0A9F00459C94 /* ComposableTransmission.swift in Sources */,
+				48A26B05297B3C5900459C94 /* SimpleLoadingState.swift in Sources */,
 				4890DD6227EA53AD00942814 /* CountiesView.swift in Sources */,
 				4890DD7027EA75DF00942814 /* AsyncContentView.swift in Sources */,
 				4831E6402970ABF700213DD6 /* Vaccination.swift in Sources */,
@@ -243,6 +269,8 @@
 				48FF7766285BCE1600A0C116 /* CountyViewModel.swift in Sources */,
 				4890DD7927EBB61000942814 /* APIClient.swift in Sources */,
 				4890DD4F27E5885000942814 /* cdc_covidApp.swift in Sources */,
+				48A26B03297B33DD00459C94 /* VaccinationsView.swift in Sources */,
+				48A26B01297B211E00459C94 /* ComposableVaccination.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +473,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		48A3BB702977658C00AE73FA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		48A3BB712977658C00AE73FA /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48A3BB702977658C00AE73FA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4890DD4327E5885000942814 /* Project object */;
 }

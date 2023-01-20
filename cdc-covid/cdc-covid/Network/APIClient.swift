@@ -113,3 +113,14 @@ private actor Serializer {
         try JSONDecoder().decode(T.self, from: data)
     }
 }
+
+extension APIClient {
+    //TODO: how can we revert back to previous way of calling API
+    func vaccinations(fips: String) async throws -> [Vaccination] {
+        var queryItems: [String:String] = [:]
+        queryItems["fips"] = fips
+        queryItems["date"] = "2022-03-22T00:00:00.000"
+        let request = Request<[Vaccination]>.get("resource/8xkx-amqh.json", query: queryItems)
+        return try await send(request)
+    }
+}

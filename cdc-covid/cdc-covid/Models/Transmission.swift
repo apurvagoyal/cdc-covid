@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct Transmission: Identifiable, Decodable, Hashable {
+struct Transmission: Identifiable, Decodable, Hashable, Equatable {
     //always use enums in the model to display state and remove ambiguity
     //this also sits well with state machine
     enum transmission_level: String, Codable {
